@@ -1,0 +1,11 @@
+from __future__ import annotations
+
+
+def is_due(cadence: str, hour_utc: int) -> bool:
+    if cadence == "hourly":
+        return True
+    if cadence == "every_2h":
+        return hour_utc % 2 == 0
+    if cadence == "daily":
+        return hour_utc == 0
+    raise ValueError(f"unknown cadence: {cadence}")

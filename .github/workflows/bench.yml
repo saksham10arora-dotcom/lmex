@@ -1,0 +1,36 @@
+name: bench
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+concurrency:
+  group: bench
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install llm-latency-bench
+      - name: Run benchmarks
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python scripts/run_bench.py
+      - name: Commit data
+        run: |
+          git config user.name "lmex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data reports
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: bench $(date -u +'%Y-%m-%dT%H:%M') [skip ci]"
+          git pull --rebase origin main
+          git push

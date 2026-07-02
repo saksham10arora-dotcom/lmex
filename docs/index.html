@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LMEX | The LLM Latency Exchange</title>
+<meta name="description" content="Free-tier LLM APIs trade as tickers. Price is TTFT p99. Down is good.">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+<header>
+  <h1>LMEX</h1>
+  <p class="tagline">The LLM Latency Exchange. Latency is the price you pay. Down is good.</p>
+</header>
+
+<div id="tape" class="tape"><span class="tape-inner" id="tape-inner">loading the tape...</span></div>
+
+<main>
+  <section class="controls">
+    <div id="ticker-buttons"></div>
+    <div id="bucket-buttons">
+      <button data-bucket="21600" class="active">6H</button>
+      <button data-bucket="86400">1D</button>
+    </div>
+  </section>
+
+  <section id="chart-wrap">
+    <div id="chart"></div>
+    <div id="empty-state" hidden>market opens at the next hourly candle</div>
+  </section>
+
+  <section class="row">
+    <div class="panel" id="board-panel">
+      <h2>The board</h2>
+      <table id="board">
+        <thead><tr>
+          <th>Ticker</th><th>Status</th><th>p50</th><th>p95</th><th>p99</th>
+          <th>tok/s</th><th>err</th><th>24h</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="composite">LMEX Composite: <span id="composite">n/a</span>
+        <span class="hint">(100 = trailing 7d mean, below 100 = market got faster)</span></p>
+    </div>
+    <div class="panel" id="report-panel">
+      <h2>Market open report</h2>
+      <pre id="report">no report yet</pre>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Measured hourly by <a href="https://pypi.org/project/llm-latency-bench/">llm-latency-bench</a>
+  on GitHub Actions. Price is TTFT p99 in ms, candles inverted: green means faster.
+  Source at <a href="https://github.com/saksham10arora-dotcom/lmex">saksham10arora-dotcom/lmex</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

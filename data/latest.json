@@ -1,0 +1,54 @@
+{
+  "updated": "2026-07-02T08:30:05.353229+00:00",
+  "report": null,
+  "tickers": {
+    "GROQ": {
+      "last": {
+        "ts": "2026-07-02T08:30:10.700955+00:00",
+        "ticker": "GROQ",
+        "model": "llama-3.3-70b-versatile",
+        "n": 8,
+        "errors": 0,
+        "error_rate": 0.0,
+        "ttft_p50": 262.8,
+        "ttft_p95": 289.4,
+        "ttft_p99": 289.4,
+        "total_p50": 429.2,
+        "total_p95": 492.2,
+        "total_p99": 492.2,
+        "tok_per_sec": 104.6
+      },
+      "prev": null,
+      "status": "TRADING"
+    },
+    "GMNI": {
+      "last": {
+        "ts": "2026-07-02T08:30:21.240769+00:00",
+        "ticker": "GMNI",
+        "model": "gemini-2.5-flash",
+        "n": 6,
+        "errors": 6,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
+      },
+      "prev": null,
+      "status": "HALTED"
+    },
+    "CBRS": {
+      "last": null,
+      "prev": null,
+      "status": "DELISTED"
+    },
+    "OPRT": {
+      "last": null,
+      "prev": null,
+      "status": "DELISTED"
+    }
+  }
+}

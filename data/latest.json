@@ -1,117 +1,117 @@
 {
-  "updated": "2026-07-02T16:59:56.254656+00:00",
+  "updated": "2026-07-02T18:45:28.824356+00:00",
   "report": null,
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-07-02T17:00:02.159110+00:00",
+        "ts": "2026-07-02T18:45:33.706616+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 232.5,
-        "ttft_p95": 421.9,
-        "ttft_p99": 421.9,
-        "total_p50": 410.6,
-        "total_p95": 634.8,
-        "total_p99": 634.8,
-        "tok_per_sec": 104.3
+        "ttft_p50": 87.5,
+        "ttft_p95": 268.9,
+        "ttft_p99": 268.9,
+        "total_p50": 277.3,
+        "total_p95": 418.8,
+        "total_p99": 418.8,
+        "tok_per_sec": 141.6
       },
       "prev": null,
       "status": "TRADING"
     },
     "L8B": {
       "last": {
-        "ts": "2026-07-02T17:00:06.115512+00:00",
+        "ts": "2026-07-02T18:45:36.981764+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 139.5,
-        "ttft_p95": 242.9,
-        "ttft_p99": 242.9,
-        "total_p50": 215.1,
-        "total_p95": 560.5,
-        "total_p99": 560.5,
-        "tok_per_sec": 175.0
+        "ttft_p50": 56.2,
+        "ttft_p95": 141.7,
+        "ttft_p99": 141.7,
+        "total_p50": 165.9,
+        "total_p95": 223.2,
+        "total_p99": 223.2,
+        "tok_per_sec": 275.3
       },
       "prev": null,
       "status": "TRADING"
     },
     "OSS": {
       "last": {
-        "ts": "2026-07-02T17:00:10.091068+00:00",
+        "ts": "2026-07-02T18:45:41.323353+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 136.0,
-        "ttft_p95": 431.2,
-        "ttft_p99": 431.2,
-        "total_p50": 212.7,
-        "total_p95": 506.7,
-        "total_p99": 506.7,
-        "tok_per_sec": 277.0
+        "ttft_p50": 213.0,
+        "ttft_p95": 264.2,
+        "ttft_p99": 264.2,
+        "total_p50": 278.2,
+        "total_p95": 332.0,
+        "total_p99": 332.0,
+        "tok_per_sec": 267.9
       },
       "prev": null,
       "status": "TRADING"
     },
     "QWEN": {
       "last": {
-        "ts": "2026-07-02T17:00:13.250222+00:00",
+        "ts": "2026-07-02T18:45:45.176438+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 63.6,
-        "ttft_p95": 269.2,
-        "ttft_p99": 269.2,
-        "total_p50": 186.3,
-        "total_p95": 376.7,
-        "total_p99": 376.7,
-        "tok_per_sec": 272.5
+        "ttft_p50": 111.1,
+        "ttft_p95": 301.9,
+        "ttft_p99": 301.9,
+        "total_p50": 252.5,
+        "total_p95": 423.7,
+        "total_p99": 423.7,
+        "tok_per_sec": 206.5
       },
       "prev": null,
       "status": "TRADING"
     },
     "GMNI": {
       "last": {
-        "ts": "2026-07-02T17:00:32.000253+00:00",
+        "ts": "2026-07-02T18:46:01.055264+00:00",
         "ticker": "GMNI",
         "model": "gemini-2.5-flash",
         "n": 6,
-        "errors": 2,
-        "error_rate": 0.3333,
-        "ttft_p50": 1750.7,
-        "ttft_p95": 1798.9,
-        "ttft_p99": 1798.9,
-        "total_p50": 1750.7,
-        "total_p95": 1798.9,
-        "total_p99": 1798.9,
-        "tok_per_sec": 5.4
+        "errors": 4,
+        "error_rate": 0.6667,
+        "ttft_p50": 2917.6,
+        "ttft_p95": 3204.3,
+        "ttft_p99": 3204.3,
+        "total_p50": 2917.6,
+        "total_p95": 3204.3,
+        "total_p99": 3204.3,
+        "tok_per_sec": 3.1
       },
       "prev": null,
-      "status": "TRADING"
+      "status": "HALTED"
     },
     "CBRS": {
       "last": {
-        "ts": "2026-07-02T17:01:36.591824+00:00",
+        "ts": "2026-07-02T18:47:03.947487+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
-        "errors": 2,
-        "error_rate": 0.25,
-        "ttft_p50": 222.9,
-        "ttft_p95": 811.2,
-        "ttft_p99": 811.2,
-        "total_p50": 241.1,
-        "total_p95": 833.7,
-        "total_p99": 833.7,
-        "tok_per_sec": 251.9
+        "errors": 4,
+        "error_rate": 0.5,
+        "ttft_p50": 149.1,
+        "ttft_p95": 227.0,
+        "ttft_p99": 227.0,
+        "total_p50": 161.1,
+        "total_p95": 258.7,
+        "total_p99": 258.7,
+        "tok_per_sec": 462.9
       },
       "prev": null,
       "status": "TRADING"

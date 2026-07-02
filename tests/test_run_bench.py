@@ -49,3 +49,15 @@ def test_force_ignores_cadence(tmp_path):
                     tmp_path / "reports", NOW, force=True,
                     runner=fake_runner_ok)
     assert len(recs) == 1
+
+
+def test_per_ticker_max_tokens_override(tmp_path):
+    captured = []
+    def capture_runner(cmd):
+        captured.append(cmd)
+        return fake_runner_ok(cmd)
+    t = TICKERS[0] | {"max_tokens": 256}
+    run_once([t], tmp_path / "data", tmp_path / "reports", NOW,
+             runner=capture_runner)
+    cmd = captured[0]
+    assert cmd[cmd.index("--max-tokens") + 1] == "256"

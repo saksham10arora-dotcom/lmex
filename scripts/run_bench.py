@@ -25,7 +25,8 @@ def _run_cli(cmd: list[str]) -> int:
 def _bench_cmd(t: dict, key: str | None, out: str) -> list[str]:
     cmd = ["llm-bench", "--provider", t["provider"], "--model", t["model"],
            "--prompt", PROMPT, "-n", str(t["n"]), "--warmup", "1",
-           "--max-tokens", "64", "--timeout", "30", "--json", out]
+           "--max-tokens", str(t.get("max_tokens", 64)),
+           "--timeout", "30", "--json", out]
     if t.get("base_url"):
         cmd += ["--base-url", t["base_url"]]
     if key:

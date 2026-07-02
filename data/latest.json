@@ -1,25 +1,68 @@
 {
-  "updated": "2026-07-02T08:30:05.353229+00:00",
+  "updated": "2026-07-02T09:01:51.577375+00:00",
   "report": null,
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-07-02T08:30:10.700955+00:00",
+        "ts": "2026-07-02T09:01:56.797265+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 262.8,
-        "ttft_p95": 289.4,
-        "ttft_p99": 289.4,
-        "total_p50": 429.2,
-        "total_p95": 492.2,
-        "total_p99": 492.2,
-        "tok_per_sec": 104.6
+        "ttft_p50": 199.8,
+        "ttft_p95": 275.3,
+        "ttft_p99": 275.3,
+        "total_p50": 391.5,
+        "total_p95": 452.6,
+        "total_p99": 452.6,
+        "tok_per_sec": 124.2
       },
       "prev": null,
       "status": "TRADING"
+    },
+    "L8B": {
+      "last": {
+        "ts": "2026-07-02T09:02:00.327385+00:00",
+        "ticker": "L8B",
+        "model": "llama-3.1-8b-instant",
+        "n": 8,
+        "errors": 0,
+        "error_rate": 0.0,
+        "ttft_p50": 44.1,
+        "ttft_p95": 282.0,
+        "ttft_p99": 282.0,
+        "total_p50": 145.3,
+        "total_p95": 394.0,
+        "total_p99": 394.0,
+        "tok_per_sec": 222.4
+      },
+      "prev": null,
+      "status": "TRADING"
+    },
+    "OSS": {
+      "last": {
+        "ts": "2026-07-02T09:01:51.577375+00:00",
+        "ticker": "OSS",
+        "model": "openai/gpt-oss-120b",
+        "n": 8,
+        "errors": 8,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
+      },
+      "prev": null,
+      "status": "HALTED"
+    },
+    "QWEN": {
+      "last": null,
+      "prev": null,
+      "status": "DELISTED"
     },
     "GMNI": {
       "last": {
@@ -38,7 +81,7 @@
         "tok_per_sec": 0.0
       },
       "prev": null,
-      "status": "HALTED"
+      "status": "DELISTED"
     },
     "CBRS": {
       "last": null,

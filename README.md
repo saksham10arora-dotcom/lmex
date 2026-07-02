@@ -35,7 +35,7 @@ exchange floor is a static page.
 |---|---|---|---|
 | GROQ | Groq | llama-3.3-70b-versatile | hourly |
 | GMNI | Google Gemini | gemini-2.5-flash | every 2 hours |
-| CBRS | Cerebras | llama-3.3-70b | hourly |
+| CBRS | Cerebras | gpt-oss-120b | hourly, cross-listed with OSS |
 | L8B | Groq | llama-3.1-8b-instant | hourly |
 | OSS | Groq | gpt-oss-120b | hourly |
 | QWEN | Groq | qwen3-32b | every 2 hours |

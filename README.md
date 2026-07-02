@@ -44,6 +44,12 @@ exchange floor is a static page.
 Statuses: TRADING, HALTED (error rate above 50% on the last run), DELISTED
 (no API key configured or no data for 48 hours).
 
+Honesty note on sample size: each hourly tick is a small run (6 to 10
+requests), so an hourly "p99" is really that hour's worst request. The
+daily candles aggregate 24 hourly samples, which is where the tail starts
+meaning something. Small n keeps the whole exchange inside free tiers; the
+tradeoff is disclosed here instead of hidden.
+
 ## Why p99 and not the mean
 
 The mean blends fast and slow regimes into one number that describes neither.

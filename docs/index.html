@@ -53,7 +53,9 @@
 <footer>
   <p>Measured hourly by <a href="https://pypi.org/project/llm-latency-bench/">llm-latency-bench</a>
   on GitHub Actions. Price is TTFT p99 in ms, candles inverted: green means faster.
-  Source at <a href="https://github.com/saksham10arora-dotcom/lmex">saksham10arora-dotcom/lmex</a>.</p>
+  Each hourly tick is a small run (6 to 10 requests), so hourly p99 means that hour's
+  worst request; daily candles aggregate 24 of those. All raw data is in the
+  <a href="https://github.com/saksham10arora-dotcom/lmex">repo</a>, recompute anything.</p>
 </footer>
 
 <script src="app.js"></script>

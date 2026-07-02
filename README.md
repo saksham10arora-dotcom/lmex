@@ -36,7 +36,10 @@ exchange floor is a static page.
 | GROQ | Groq | llama-3.3-70b-versatile | hourly |
 | GMNI | Google Gemini | gemini-2.5-flash | every 2 hours |
 | CBRS | Cerebras | llama-3.3-70b | hourly |
-| OPRT | OpenRouter | deepseek-chat-v3 (free) | once daily, the illiquid one |
+| L8B | Groq | llama-3.1-8b-instant | hourly |
+| OSS | Groq | gpt-oss-120b | hourly |
+| QWEN | Groq | qwen3-32b | every 2 hours |
+| OPRT | OpenRouter | deepseek-chat-v3 (free) | every 4 hours, the illiquid one |
 
 Statuses: TRADING, HALTED (error rate above 50% on the last run), DELISTED
 (no API key configured or no data for 48 hours).

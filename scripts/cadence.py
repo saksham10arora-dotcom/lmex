@@ -6,6 +6,8 @@ def is_due(cadence: str, hour_utc: int) -> bool:
         return True
     if cadence == "every_2h":
         return hour_utc % 2 == 0
+    if cadence == "every_4h":
+        return hour_utc % 4 == 0
     if cadence == "daily":
         return hour_utc == 0
     raise ValueError(f"unknown cadence: {cadence}")

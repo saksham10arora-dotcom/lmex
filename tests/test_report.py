@@ -18,12 +18,14 @@ def test_generate_report(tmp_path):
         rec("2026-07-02T10:07:00+00:00", "GROQ", 150.0),
         rec("2026-07-02T23:07:00+00:00", "GROQ", 200.0),
         rec("2026-07-02T10:07:00+00:00", "GMNI", 400.0, err=0.8),
+        rec("2026-07-02T10:07:00+00:00", "OPRT", 0.0, p50=0.0, err=1.0),
     ])
     out = generate(data, reports, date(2026, 7, 2))
     text = out.read_text()
     assert out.name == "2026-07-02.md"
     assert "GROQ" in text and "-33.3%" in text
     assert "GMNI" in text and "halted" in text.lower()
+    assert "| OPRT | halted | n/a | n/a |" in text  # error close never shown as 0ms
     assert "—" not in text  # no em-dashes, hard rule
 
 

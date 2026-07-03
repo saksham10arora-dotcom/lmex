@@ -17,6 +17,11 @@ def test_every_4h_hours():
     assert not is_due("every_4h", 3) and not is_due("every_4h", 22 + 1)
 
 
+def test_every_12h_hours():
+    assert is_due("every_12h", 0) and is_due("every_12h", 12)
+    assert not is_due("every_12h", 6) and not is_due("every_12h", 18)
+
+
 def test_daily_midnight_only():
     assert is_due("daily", 0)
     assert not any(is_due("daily", h) for h in range(1, 24))

@@ -31,6 +31,9 @@ def generate(data_dir: Path, reports_dir: Path, day: date) -> Path | None:
              "| Ticker | Close | Prior | Move |", "|---|---|---|---|"]
     moves: list[tuple[str, float]] = []
     for tk, r in sorted(closes.items()):
+        if r["ttft_p99"] <= 0:
+            lines.append(f"| {tk} | halted | n/a | n/a |")
+            continue
         p = prior.get(tk)
         if p and p["ttft_p99"] > 0:
             pct = (r["ttft_p99"] - p["ttft_p99"]) / p["ttft_p99"] * 100

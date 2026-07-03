@@ -43,7 +43,7 @@
     "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
     "env_key": "GEMINI_API_KEY",
     "n": 6,
-    "cadence": "every_2h",
+    "cadence": "every_12h",
     "max_tokens": 256
   },
   {
@@ -59,7 +59,7 @@
   {
     "ticker": "OPRT",
     "provider": "openai",
-    "model": "deepseek/deepseek-chat-v3-0324:free",
+    "model": "google/gemma-4-31b-it:free",
     "base_url": "https://openrouter.ai/api/v1",
     "env_key": "OPENROUTER_API_KEY",
     "n": 6,

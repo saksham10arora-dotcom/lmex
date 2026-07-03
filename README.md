@@ -34,12 +34,12 @@ exchange floor is a static page.
 | Ticker | Provider | Model | Trades |
 |---|---|---|---|
 | GROQ | Groq | llama-3.3-70b-versatile | hourly |
-| GMNI | Google Gemini | gemini-2.5-flash | every 2 hours |
+| GMNI | Google Gemini | gemini-2.5-flash | twice daily, free tier is 20 req/day |
 | CBRS | Cerebras | gpt-oss-120b | hourly, cross-listed with OSS |
 | L8B | Groq | llama-3.1-8b-instant | hourly |
 | OSS | Groq | gpt-oss-120b | hourly |
 | QWEN | Groq | qwen3-32b | every 2 hours |
-| OPRT | OpenRouter | deepseek-chat-v3 (free) | every 4 hours, the illiquid one |
+| OPRT | OpenRouter | gemma-4-31b (free) | every 4 hours, the illiquid one |
 
 Statuses: TRADING, HALTED (error rate above 50% on the last run), DELISTED
 (no API key configured or no data for 48 hours).

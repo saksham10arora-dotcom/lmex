@@ -78,6 +78,15 @@ To fork the exchange, set repo secrets for the tickers you want listed:
 `GROQ_API_KEY`, `GEMINI_API_KEY`, `CEREBRAS_API_KEY`, `OPENROUTER_API_KEY`.
 Missing keys just delist the ticker. Edit `tickers.json` to list your own.
 
+## Dataset
+
+The full benchmark history (743+ hourly records across 7 model endpoints, and
+growing) is published as a public dataset:
+[LLM Inference Latency Benchmark on Kaggle](https://www.kaggle.com/datasets/c0sbyy/llm-inference-latency-benchmark).
+
+A live router that reads this feed to pick the fastest endpoint right now:
+[latency-router](https://github.com/saksham10arora-dotcom/latency-router).
+
 ## License
 
 MIT.

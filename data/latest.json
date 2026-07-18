@@ -1,22 +1,22 @@
 {
-  "updated": "2026-07-17T23:05:22.027565+00:00",
-  "report": "reports/2026-07-16.md",
+  "updated": "2026-07-18T00:07:16.133225+00:00",
+  "report": "reports/2026-07-17.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-07-17T23:05:27.938914+00:00",
+        "ts": "2026-07-18T00:07:21.037784+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 220.3,
-        "ttft_p95": 287.2,
-        "ttft_p99": 287.2,
-        "total_p50": 390.0,
-        "total_p95": 438.7,
-        "total_p99": 438.7,
-        "tok_per_sec": 117.5
+        "ttft_p50": 179.2,
+        "ttft_p95": 286.7,
+        "ttft_p99": 286.7,
+        "total_p50": 369.6,
+        "total_p95": 472.3,
+        "total_p99": 472.3,
+        "tok_per_sec": 136.6
       },
       "prev": {
         "ts": "2026-07-17T00:09:49.419633+00:00",
@@ -37,19 +37,19 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-07-17T23:05:32.395468+00:00",
+        "ts": "2026-07-18T00:07:25.286236+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 120.5,
-        "ttft_p95": 236.9,
-        "ttft_p99": 236.9,
-        "total_p50": 239.2,
-        "total_p95": 339.1,
-        "total_p99": 339.1,
-        "tok_per_sec": 190.6
+        "ttft_p50": 143.1,
+        "ttft_p95": 184.5,
+        "ttft_p99": 184.5,
+        "total_p50": 227.1,
+        "total_p95": 401.7,
+        "total_p99": 401.7,
+        "tok_per_sec": 201.3
       },
       "prev": {
         "ts": "2026-07-17T00:09:53.223778+00:00",
@@ -70,19 +70,19 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-07-17T23:05:37.407167+00:00",
+        "ts": "2026-07-18T00:07:32.331356+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 209.8,
-        "ttft_p95": 430.7,
-        "ttft_p99": 430.7,
-        "total_p50": 277.0,
-        "total_p95": 503.0,
-        "total_p99": 503.0,
-        "tok_per_sec": 228.9
+        "ttft_p50": 258.2,
+        "ttft_p95": 1111.7,
+        "ttft_p99": 1111.7,
+        "total_p50": 325.8,
+        "total_p95": 1175.1,
+        "total_p99": 1175.1,
+        "tok_per_sec": 157.2
       },
       "prev": {
         "ts": "2026-07-17T00:09:58.334424+00:00",
@@ -103,85 +103,85 @@
     },
     "QWEN": {
       "last": {
-        "ts": "2026-07-17T22:04:06.127704+00:00",
+        "ts": "2026-07-18T00:07:34.912151+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
-        "errors": 0,
-        "error_rate": 0.0,
-        "ttft_p50": 266.4,
-        "ttft_p95": 273.4,
-        "ttft_p99": 273.4,
-        "total_p50": 393.5,
-        "total_p95": 418.3,
-        "total_p99": 418.3,
-        "tok_per_sec": 162.2
+        "errors": 6,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-07-16T22:13:02.980739+00:00",
+        "ts": "2026-07-17T00:10:02.714290+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 124.4,
-        "ttft_p95": 242.9,
-        "ttft_p99": 242.9,
-        "total_p50": 249.6,
-        "total_p95": 371.9,
-        "total_p99": 371.9,
-        "tok_per_sec": 226.5
+        "ttft_p50": 122.3,
+        "ttft_p95": 322.9,
+        "ttft_p99": 322.9,
+        "total_p50": 246.4,
+        "total_p95": 796.5,
+        "total_p99": 796.5,
+        "tok_per_sec": 179.7
       },
-      "status": "TRADING"
+      "status": "HALTED"
     },
     "GMNI": {
       "last": {
-        "ts": "2026-07-17T12:19:42.116788+00:00",
+        "ts": "2026-07-18T00:07:48.713354+00:00",
         "ticker": "GMNI",
         "model": "gemini-2.5-flash",
         "n": 6,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 1712.7,
-        "ttft_p95": 1793.8,
-        "ttft_p99": 1793.8,
-        "total_p50": 1712.7,
-        "total_p95": 1793.8,
-        "total_p99": 1793.8,
+        "ttft_p50": 1630.9,
+        "ttft_p95": 1733.7,
+        "ttft_p99": 1733.7,
+        "total_p50": 1630.9,
+        "total_p95": 1733.7,
+        "total_p99": 1733.7,
         "tok_per_sec": 5.8
       },
       "prev": {
-        "ts": "2026-07-15T00:03:07.903496+00:00",
+        "ts": "2026-07-17T00:10:18.946819+00:00",
         "ticker": "GMNI",
         "model": "gemini-2.5-flash",
         "n": 6,
         "errors": 2,
         "error_rate": 0.3333,
-        "ttft_p50": 1696.9,
-        "ttft_p95": 2415.2,
-        "ttft_p99": 2415.2,
-        "total_p50": 1696.9,
-        "total_p95": 2415.2,
-        "total_p99": 2415.2,
-        "tok_per_sec": 5.9
+        "ttft_p50": 1739.3,
+        "ttft_p95": 4114.2,
+        "ttft_p99": 4114.2,
+        "total_p50": 1739.3,
+        "total_p95": 4114.2,
+        "total_p99": 4114.2,
+        "tok_per_sec": 3.8
       },
       "status": "TRADING"
     },
     "CBRS": {
       "last": {
-        "ts": "2026-07-17T23:06:41.241514+00:00",
+        "ts": "2026-07-18T00:08:51.804136+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
         "errors": 2,
         "error_rate": 0.25,
-        "ttft_p50": 180.1,
-        "ttft_p95": 206.1,
-        "ttft_p99": 206.1,
-        "total_p50": 201.4,
-        "total_p95": 229.2,
-        "total_p99": 229.2,
-        "tok_per_sec": 463.3
+        "ttft_p50": 124.8,
+        "ttft_p95": 170.8,
+        "ttft_p99": 170.8,
+        "total_p50": 139.9,
+        "total_p95": 195.9,
+        "total_p99": 195.9,
+        "tok_per_sec": 606.3
       },
       "prev": {
         "ts": "2026-07-17T00:11:23.481933+00:00",
@@ -202,7 +202,22 @@
     },
     "OPRT": {
       "last": {
-        "ts": "2026-07-17T20:14:55.245612+00:00",
+        "ts": "2026-07-18T00:09:06.371926+00:00",
+        "ticker": "OPRT",
+        "model": "google/gemma-4-31b-it:free",
+        "n": 6,
+        "errors": 5,
+        "error_rate": 0.8333,
+        "ttft_p50": 2634.6,
+        "ttft_p95": 2634.6,
+        "ttft_p99": 2634.6,
+        "total_p50": 3193.7,
+        "total_p95": 3193.7,
+        "total_p99": 3193.7,
+        "tok_per_sec": 10.3
+      },
+      "prev": {
+        "ts": "2026-07-17T00:11:37.185594+00:00",
         "ticker": "OPRT",
         "model": "google/gemma-4-31b-it:free",
         "n": 6,
@@ -215,21 +230,6 @@
         "total_p95": 0.0,
         "total_p99": 0.0,
         "tok_per_sec": 0.0
-      },
-      "prev": {
-        "ts": "2026-07-16T20:11:03.426489+00:00",
-        "ticker": "OPRT",
-        "model": "google/gemma-4-31b-it:free",
-        "n": 6,
-        "errors": 2,
-        "error_rate": 0.3333,
-        "ttft_p50": 997.9,
-        "ttft_p95": 2446.2,
-        "ttft_p99": 2446.2,
-        "total_p50": 1657.7,
-        "total_p95": 3231.4,
-        "total_p99": 3231.4,
-        "tok_per_sec": 15.2
       },
       "status": "HALTED"
     }

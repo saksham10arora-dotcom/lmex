@@ -1,22 +1,22 @@
 {
-  "updated": "2026-07-21T22:10:31.109336+00:00",
-  "report": "reports/2026-07-20.md",
+  "updated": "2026-07-22T00:02:36.993823+00:00",
+  "report": "reports/2026-07-21.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-07-21T22:10:36.691887+00:00",
+        "ts": "2026-07-22T00:02:43.421796+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 124.0,
-        "ttft_p95": 336.8,
-        "ttft_p99": 336.8,
-        "total_p50": 310.9,
-        "total_p95": 497.5,
-        "total_p99": 497.5,
-        "tok_per_sec": 130.0
+        "ttft_p50": 344.4,
+        "ttft_p95": 458.2,
+        "ttft_p99": 458.2,
+        "total_p50": 496.0,
+        "total_p95": 859.4,
+        "total_p99": 859.4,
+        "tok_per_sec": 82.1
       },
       "prev": {
         "ts": "2026-07-21T00:06:51.486423+00:00",
@@ -37,19 +37,19 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-07-21T22:10:40.729705+00:00",
+        "ts": "2026-07-22T00:02:49.022478+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 97.5,
-        "ttft_p95": 205.6,
-        "ttft_p99": 205.6,
-        "total_p50": 206.3,
-        "total_p95": 317.7,
-        "total_p99": 317.7,
-        "tok_per_sec": 212.6
+        "ttft_p50": 246.5,
+        "ttft_p95": 573.9,
+        "ttft_p99": 573.9,
+        "total_p50": 362.1,
+        "total_p95": 679.1,
+        "total_p99": 679.1,
+        "tok_per_sec": 109.9
       },
       "prev": {
         "ts": "2026-07-21T00:06:55.060609+00:00",
@@ -70,19 +70,19 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-07-21T22:10:46.236189+00:00",
+        "ts": "2026-07-22T00:02:55.465960+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 276.5,
-        "ttft_p95": 579.9,
-        "ttft_p99": 579.9,
-        "total_p50": 342.1,
-        "total_p95": 681.7,
-        "total_p99": 681.7,
-        "tok_per_sec": 211.6
+        "ttft_p50": 298.8,
+        "ttft_p95": 642.5,
+        "ttft_p99": 642.5,
+        "total_p50": 380.4,
+        "total_p95": 991.2,
+        "total_p99": 991.2,
+        "tok_per_sec": 144.7
       },
       "prev": {
         "ts": "2026-07-21T00:06:59.781120+00:00",
@@ -103,7 +103,7 @@
     },
     "QWEN": {
       "last": {
-        "ts": "2026-07-21T22:10:48.528931+00:00",
+        "ts": "2026-07-22T00:02:57.814119+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
@@ -136,6 +136,21 @@
     },
     "GMNI": {
       "last": {
+        "ts": "2026-07-22T00:03:12.061448+00:00",
+        "ticker": "GMNI",
+        "model": "gemini-2.5-flash",
+        "n": 6,
+        "errors": 2,
+        "error_rate": 0.3333,
+        "ttft_p50": 1611.2,
+        "ttft_p95": 1906.8,
+        "ttft_p99": 1906.8,
+        "total_p50": 1611.2,
+        "total_p95": 1906.8,
+        "total_p99": 1906.8,
+        "tok_per_sec": 5.3
+      },
+      "prev": {
         "ts": "2026-07-21T00:07:15.173238+00:00",
         "ticker": "GMNI",
         "model": "gemini-2.5-flash",
@@ -150,38 +165,23 @@
         "total_p99": 1746.9,
         "tok_per_sec": 5.6
       },
-      "prev": {
-        "ts": "2026-07-19T00:09:11.000458+00:00",
-        "ticker": "GMNI",
-        "model": "gemini-2.5-flash",
-        "n": 6,
-        "errors": 3,
-        "error_rate": 0.5,
-        "ttft_p50": 1580.9,
-        "ttft_p95": 2102.7,
-        "ttft_p99": 2102.7,
-        "total_p50": 1580.9,
-        "total_p95": 2102.7,
-        "total_p99": 2102.7,
-        "tok_per_sec": 5.1
-      },
       "status": "TRADING"
     },
     "CBRS": {
       "last": {
-        "ts": "2026-07-21T22:11:52.073730+00:00",
+        "ts": "2026-07-22T00:04:16.693482+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
         "errors": 2,
         "error_rate": 0.25,
-        "ttft_p50": 129.1,
-        "ttft_p95": 267.3,
-        "ttft_p99": 267.3,
-        "total_p50": 150.7,
-        "total_p95": 288.5,
-        "total_p99": 288.5,
-        "tok_per_sec": 484.2
+        "ttft_p50": 327.7,
+        "ttft_p95": 569.5,
+        "ttft_p99": 569.5,
+        "total_p50": 349.3,
+        "total_p95": 570.2,
+        "total_p99": 570.2,
+        "tok_per_sec": 227.1
       },
       "prev": {
         "ts": "2026-07-21T00:08:18.708723+00:00",
@@ -202,36 +202,36 @@
     },
     "OPRT": {
       "last": {
-        "ts": "2026-07-21T20:25:02.560736+00:00",
+        "ts": "2026-07-22T00:04:33.241082+00:00",
         "ticker": "OPRT",
         "model": "google/gemma-4-31b-it:free",
         "n": 6,
-        "errors": 2,
-        "error_rate": 0.3333,
-        "ttft_p50": 1024.6,
-        "ttft_p95": 2352.2,
-        "ttft_p99": 2352.2,
-        "total_p50": 1693.6,
-        "total_p95": 3064.3,
-        "total_p99": 3064.3,
-        "tok_per_sec": 18.7
+        "errors": 6,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-07-20T20:41:01.838649+00:00",
+        "ts": "2026-07-21T00:08:33.860790+00:00",
         "ticker": "OPRT",
         "model": "google/gemma-4-31b-it:free",
         "n": 6,
-        "errors": 1,
-        "error_rate": 0.1667,
-        "ttft_p50": 1485.3,
-        "ttft_p95": 2390.6,
-        "ttft_p99": 2390.6,
-        "total_p50": 2203.3,
-        "total_p95": 2985.0,
-        "total_p99": 2985.0,
-        "tok_per_sec": 16.5
+        "errors": 6,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
-      "status": "TRADING"
+      "status": "HALTED"
     }
   }
 }

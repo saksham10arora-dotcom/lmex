@@ -1,22 +1,22 @@
 {
-  "updated": "2026-07-22T22:14:14.819586+00:00",
-  "report": "reports/2026-07-21.md",
+  "updated": "2026-07-23T00:11:29.988957+00:00",
+  "report": "reports/2026-07-22.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-07-22T22:14:20.310350+00:00",
+        "ts": "2026-07-23T00:11:35.015060+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 202.4,
-        "ttft_p95": 225.3,
-        "ttft_p99": 225.3,
-        "total_p50": 368.3,
-        "total_p95": 396.9,
-        "total_p99": 396.9,
-        "tok_per_sec": 130.5
+        "ttft_p50": 78.9,
+        "ttft_p95": 242.6,
+        "ttft_p99": 242.6,
+        "total_p50": 259.8,
+        "total_p95": 391.3,
+        "total_p99": 391.3,
+        "tok_per_sec": 150.0
       },
       "prev": {
         "ts": "2026-07-22T00:02:43.421796+00:00",
@@ -37,19 +37,19 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-07-22T22:14:24.526015+00:00",
+        "ts": "2026-07-23T00:11:38.827457+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 111.4,
-        "ttft_p95": 215.4,
-        "ttft_p99": 215.4,
-        "total_p50": 219.4,
-        "total_p95": 350.6,
-        "total_p99": 350.6,
-        "tok_per_sec": 201.6
+        "ttft_p50": 47.3,
+        "ttft_p95": 223.5,
+        "ttft_p99": 223.5,
+        "total_p50": 171.2,
+        "total_p95": 334.8,
+        "total_p99": 334.8,
+        "tok_per_sec": 265.9
       },
       "prev": {
         "ts": "2026-07-22T00:02:49.022478+00:00",
@@ -70,19 +70,19 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-07-22T22:14:30.196906+00:00",
+        "ts": "2026-07-23T00:11:44.005747+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 286.1,
-        "ttft_p95": 946.1,
-        "ttft_p99": 946.1,
-        "total_p50": 357.8,
-        "total_p95": 1010.6,
-        "total_p99": 1010.6,
-        "tok_per_sec": 193.3
+        "ttft_p50": 212.8,
+        "ttft_p95": 350.6,
+        "ttft_p99": 350.6,
+        "total_p50": 281.4,
+        "total_p95": 435.7,
+        "total_p99": 435.7,
+        "tok_per_sec": 243.7
       },
       "prev": {
         "ts": "2026-07-22T00:02:55.465960+00:00",
@@ -103,7 +103,7 @@
     },
     "QWEN": {
       "last": {
-        "ts": "2026-07-22T22:14:32.352069+00:00",
+        "ts": "2026-07-23T00:11:46.472993+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
@@ -136,52 +136,52 @@
     },
     "GMNI": {
       "last": {
-        "ts": "2026-07-22T12:01:31.824065+00:00",
+        "ts": "2026-07-23T00:11:59.597040+00:00",
+        "ticker": "GMNI",
+        "model": "gemini-2.5-flash",
+        "n": 6,
+        "errors": 1,
+        "error_rate": 0.1667,
+        "ttft_p50": 1613.3,
+        "ttft_p95": 1676.5,
+        "ttft_p99": 1676.5,
+        "total_p50": 1613.3,
+        "total_p95": 1676.5,
+        "total_p99": 1676.5,
+        "tok_per_sec": 5.8
+      },
+      "prev": {
+        "ts": "2026-07-22T00:03:12.061448+00:00",
         "ticker": "GMNI",
         "model": "gemini-2.5-flash",
         "n": 6,
         "errors": 2,
         "error_rate": 0.3333,
-        "ttft_p50": 1731.1,
-        "ttft_p95": 1937.1,
-        "ttft_p99": 1937.1,
-        "total_p50": 1731.1,
-        "total_p95": 1937.1,
-        "total_p99": 1937.1,
-        "tok_per_sec": 5.9
-      },
-      "prev": {
-        "ts": "2026-07-21T00:07:15.173238+00:00",
-        "ticker": "GMNI",
-        "model": "gemini-2.5-flash",
-        "n": 6,
-        "errors": 0,
-        "error_rate": 0.0,
-        "ttft_p50": 1679.3,
-        "ttft_p95": 1746.9,
-        "ttft_p99": 1746.9,
-        "total_p50": 1679.3,
-        "total_p95": 1746.9,
-        "total_p99": 1746.9,
-        "tok_per_sec": 5.6
+        "ttft_p50": 1611.2,
+        "ttft_p95": 1906.8,
+        "ttft_p99": 1906.8,
+        "total_p50": 1611.2,
+        "total_p95": 1906.8,
+        "total_p99": 1906.8,
+        "tok_per_sec": 5.3
       },
       "status": "TRADING"
     },
     "CBRS": {
       "last": {
-        "ts": "2026-07-22T22:15:38.628422+00:00",
+        "ts": "2026-07-23T00:13:02.988287+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
         "errors": 2,
         "error_rate": 0.25,
-        "ttft_p50": 329.1,
-        "ttft_p95": 2301.5,
-        "ttft_p99": 2301.5,
-        "total_p50": 359.6,
-        "total_p95": 2313.2,
-        "total_p99": 2313.2,
-        "tok_per_sec": 130.4
+        "ttft_p50": 138.1,
+        "ttft_p95": 172.0,
+        "ttft_p99": 172.0,
+        "total_p50": 159.4,
+        "total_p95": 191.1,
+        "total_p99": 191.1,
+        "tok_per_sec": 661.9
       },
       "prev": {
         "ts": "2026-07-22T00:04:16.693482+00:00",
@@ -202,34 +202,34 @@
     },
     "OPRT": {
       "last": {
-        "ts": "2026-07-22T20:20:54.412312+00:00",
+        "ts": "2026-07-23T00:13:16.373552+00:00",
         "ticker": "OPRT",
         "model": "google/gemma-4-31b-it:free",
         "n": 6,
-        "errors": 4,
-        "error_rate": 0.6667,
-        "ttft_p50": 1442.4,
-        "ttft_p95": 2339.3,
-        "ttft_p99": 2339.3,
-        "total_p50": 2096.1,
-        "total_p95": 2993.8,
-        "total_p99": 2993.8,
-        "tok_per_sec": 14.1
+        "errors": 6,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-07-21T20:25:02.560736+00:00",
+        "ts": "2026-07-22T00:04:33.241082+00:00",
         "ticker": "OPRT",
         "model": "google/gemma-4-31b-it:free",
         "n": 6,
-        "errors": 2,
-        "error_rate": 0.3333,
-        "ttft_p50": 1024.6,
-        "ttft_p95": 2352.2,
-        "ttft_p99": 2352.2,
-        "total_p50": 1693.6,
-        "total_p95": 3064.3,
-        "total_p99": 3064.3,
-        "tok_per_sec": 18.7
+        "errors": 6,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
       "status": "HALTED"
     }

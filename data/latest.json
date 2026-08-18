@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-18T05:40:53.206790+00:00",
+  "updated": "2026-08-18T07:00:13.153668+00:00",
   "report": "reports/2026-08-06.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-08-18T05:40:55.703366+00:00",
+        "ts": "2026-08-18T07:00:15.759722+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -19,25 +19,25 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-08-17T07:12:57.031316+00:00",
+        "ts": "2026-08-17T08:56:47.304625+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
-        "errors": 0,
-        "error_rate": 0.0,
-        "ttft_p50": 151.2,
-        "ttft_p95": 269.5,
-        "ttft_p99": 269.5,
-        "total_p50": 321.8,
-        "total_p95": 423.6,
-        "total_p99": 423.6,
-        "tok_per_sec": 127.4
+        "errors": 8,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
       "status": "HALTED"
     },
     "L8B": {
       "last": {
-        "ts": "2026-08-18T05:40:58.196348+00:00",
+        "ts": "2026-08-18T07:00:18.408200+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -52,52 +52,52 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-08-17T07:13:01.269657+00:00",
+        "ts": "2026-08-17T08:56:49.674228+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
-        "errors": 0,
-        "error_rate": 0.0,
-        "ttft_p50": 130.7,
-        "ttft_p95": 147.1,
-        "ttft_p99": 147.1,
-        "total_p50": 226.3,
-        "total_p95": 275.4,
-        "total_p99": 275.4,
-        "tok_per_sec": 217.3
+        "errors": 8,
+        "error_rate": 1.0,
+        "ttft_p50": 0.0,
+        "ttft_p95": 0.0,
+        "ttft_p99": 0.0,
+        "total_p50": 0.0,
+        "total_p95": 0.0,
+        "total_p99": 0.0,
+        "tok_per_sec": 0.0
       },
       "status": "HALTED"
     },
     "OSS": {
       "last": {
-        "ts": "2026-08-18T05:41:03.908339+00:00",
+        "ts": "2026-08-18T07:00:24.147816+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 320.1,
-        "ttft_p95": 356.6,
-        "ttft_p99": 356.6,
-        "total_p50": 392.4,
-        "total_p95": 418.3,
-        "total_p99": 418.3,
-        "tok_per_sec": 239.4
+        "ttft_p50": 311.0,
+        "ttft_p95": 414.5,
+        "ttft_p99": 414.5,
+        "total_p50": 402.4,
+        "total_p95": 481.9,
+        "total_p99": 481.9,
+        "tok_per_sec": 216.6
       },
       "prev": {
-        "ts": "2026-08-17T07:13:06.485080+00:00",
+        "ts": "2026-08-17T08:56:55.328908+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 253.8,
-        "ttft_p95": 531.3,
-        "ttft_p99": 531.3,
-        "total_p50": 322.0,
-        "total_p95": 602.3,
-        "total_p99": 602.3,
-        "tok_per_sec": 245.6
+        "ttft_p50": 284.9,
+        "ttft_p95": 563.9,
+        "ttft_p99": 563.9,
+        "total_p50": 369.5,
+        "total_p95": 639.4,
+        "total_p99": 639.4,
+        "tok_per_sec": 205.9
       },
       "status": "TRADING"
     },
@@ -169,7 +169,7 @@
     },
     "CBRS": {
       "last": {
-        "ts": "2026-08-18T05:41:07.118563+00:00",
+        "ts": "2026-08-18T07:00:26.632883+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
@@ -184,19 +184,19 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-08-17T07:14:10.186588+00:00",
+        "ts": "2026-08-17T08:58:01.564536+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
         "errors": 2,
         "error_rate": 0.25,
-        "ttft_p50": 190.9,
-        "ttft_p95": 222.4,
-        "ttft_p99": 222.4,
-        "total_p50": 216.1,
-        "total_p95": 249.5,
-        "total_p99": 249.5,
-        "tok_per_sec": 414.6
+        "ttft_p50": 229.6,
+        "ttft_p95": 373.0,
+        "ttft_p99": 373.0,
+        "total_p50": 249.0,
+        "total_p95": 387.1,
+        "total_p99": 387.1,
+        "tok_per_sec": 426.2
       },
       "status": "HALTED"
     },

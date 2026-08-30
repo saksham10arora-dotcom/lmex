@@ -1,0 +1,97 @@
+{
+  "title": "Hourly LLM Inference Latency Benchmark",
+  "id": "c0sbyy/llm-inference-latency-benchmark",
+  "subtitle": "3,496 hourly p50/p95/p99 latency measurements across 7 LLM inference endpoints",
+  "description": "# Hourly LLM Inference Latency Benchmark\n\n3,496 hourly latency measurements across 7 LLM inference endpoints, collected continuously from 2026-07-02 to 2026-08-29. Every row is one benchmark run reporting p50/p95/p99 for time-to-first-token and end-to-end latency, plus decode throughput and error rate.\n\nMost published LLM latency numbers are means. A mean blends fast and slow regimes into one number that describes neither, and free-tier endpoints have violent tails: rate limiters engage, queues build, and the median stays innocent while the p99 triples. This dataset reports percentiles so the tail is visible.\n\n## Files\n\n- `lmex_latency.csv` -- one row per benchmark run, 17 columns, ready for `pd.read_csv`.\n\n## Quickstart\n\n```python\nimport pandas as pd\n\ndf = pd.read_csv(\"lmex_latency.csv\", parse_dates=[\"ts\"])\n\n# Which endpoint has the worst tail relative to its typical request?\nprint(df.groupby(\"ticker\")[\"ttft_tail_ratio\"].median().sort_values(ascending=False))\n\n# Does latency vary by time of day?\nprint(df.groupby(\"hour_utc\")[\"ttft_p99\"].median())\n```\n\n## Missing values are deliberate\n\nFree-tier endpoints fail often: **27.7% of runs had every request error out**, usually a rate-limit or quota rejection. Those rows carry null latency columns rather than zeros, because a failed run has no latency to report. `n`, `errors` and `error_rate` stay populated, since the failure itself is a real observation worth studying.\n\nThis matters for your analysis. If these had been stored as `0.0`, a plain `df[\"ttft_p99\"].mean()` would return 372 ms instead of the correct 515 ms -- understating the tail by 28%. pandas skips nulls automatically, so the default behaviour is now the correct one. To study availability instead of latency, use `error_rate`, which is never null.\n\n## How it was collected\n\nAn hourly GitHub Actions cron benchmarks each endpoint with [llm-latency-bench](https://pypi.org/project/llm-latency-bench/) (`pip install llm-latency-bench`) and appends the result to a git-tracked NDJSON tape. There is no server: the collector is a cron job and the raw history is the git log. Source and collection code: [github.com/saksham10arora-dotcom/lmex](https://github.com/saksham10arora-dotcom/lmex)\n\nMeasurement decisions, documented rather than assumed:\n\n- **Percentiles are nearest-rank** on the raw samples. No interpolation, no smoothing.\n- **TTFT is dispatch to first content chunk**, deliberately including connection setup, queueing, and prefill, because that is what a user waits through.\n- **Total latency ends at the last content chunk**, not at trailing usage frames or connection teardown.\n- **Throughput is decode rate only**, `(tokens - 1) / (total - TTFT)`. Including prefill would mislabel two phases as one.\n- **Errors are counted and excluded from percentiles.** A failed request has no valid latency.\n- **Warmup requests run to completion before measurement begins**, so connection setup never leaks into the numbers.\n- All timing uses a monotonic clock.\n\n## Sample size: read this before quoting a p99\n\nEach run is small (8-10 requests) to stay inside free-tier quotas. An hourly \"p99\" is therefore that hour's slowest request, not a stable tail estimate. Aggregate across hours or days before drawing conclusions about tail behavior -- grouping by `date` or `ticker` puts hundreds of samples behind each number. This limitation is disclosed here rather than hidden; the free-tier constraint is what makes continuous multi-month collection possible at all.\n\n## Endpoints covered\n\n| Ticker | Provider | Model |\n|---|---|---|\n| GROQ | Groq | llama-3.3-70b-versatile |\n| L8B | Groq | llama-3.1-8b-instant |\n| OSS | Groq | openai/gpt-oss-120b |\n| QWEN | Groq | qwen/qwen3-32b |\n| CBRS | Cerebras | gpt-oss-120b |\n| GMNI | Google | gemini-2.5-flash |\n| OPRT | OpenRouter | google/gemma-4-31b-it (free) |\n\nCadence varies by endpoint because free-tier quotas differ: hourly for most, every 2h for QWEN, every 4h for OPRT, twice daily for GMNI (20 requests/day cap). Row counts per ticker differ accordingly.\n\n## Suggested uses\n\n- Compare tail latency across inference providers on identical workloads\n- Study time-of-day and day-of-week effects on free-tier serving\n- Model latency distributions where the mean is known to mislead\n- Detect regime changes when a provider alters its serving stack\n\n## License\n\nMIT. Attribution appreciated but not required.\n",
+  "isPrivate": false,
+  "licenses": [
+    {
+      "name": "MIT"
+    }
+  ],
+  "keywords": [
+    "artificial-intelligence",
+    "nlp",
+    "computer-science",
+    "time series analysis",
+    "internet"
+  ],
+  "resources": [
+    {
+      "path": "lmex_latency.csv",
+      "description": "One row per benchmark run. Latency columns are milliseconds; percentiles are nearest-rank over that run's requests.",
+      "schema": {
+        "fields": [
+          {
+            "name": "ts",
+            "description": "UTC timestamp of the benchmark run, ISO 8601 with offset."
+          },
+          {
+            "name": "ticker",
+            "description": "Short symbol for the provider/model pair (GROQ, L8B, OSS, QWEN, CBRS, GMNI, OPRT)."
+          },
+          {
+            "name": "model",
+            "description": "Exact model identifier passed to the provider's API."
+          },
+          {
+            "name": "n",
+            "description": "Number of requests in this run. Small by design to stay inside free tiers; see the sample-size note."
+          },
+          {
+            "name": "errors",
+            "description": "Count of failed requests in the run. Excluded from all latency percentiles."
+          },
+          {
+            "name": "error_rate",
+            "description": "errors / n, from 0.0 to 1.0. A run above 0.5 marks the ticker HALTED on the live board. When 1.0, every latency column in the row is null."
+          },
+          {
+            "name": "ttft_p50",
+            "description": "Median time to first token, milliseconds. Dispatch to first content chunk, including queueing and prefill. Null when the run had no successful request."
+          },
+          {
+            "name": "ttft_p95",
+            "description": "95th percentile time to first token, milliseconds."
+          },
+          {
+            "name": "ttft_p99",
+            "description": "99th percentile time to first token, milliseconds. The headline metric: what the worst request in the run felt."
+          },
+          {
+            "name": "total_p50",
+            "description": "Median end-to-end latency, milliseconds. Dispatch to last content chunk."
+          },
+          {
+            "name": "total_p95",
+            "description": "95th percentile end-to-end latency, milliseconds."
+          },
+          {
+            "name": "total_p99",
+            "description": "99th percentile end-to-end latency, milliseconds."
+          },
+          {
+            "name": "tok_per_sec",
+            "description": "Decode throughput: (completion_tokens - 1) / (total - TTFT). Excludes prefill so it measures generation speed only."
+          },
+          {
+            "name": "provider",
+            "description": "Inference provider serving the model (groq, cerebras, google, openrouter). Derived from the ticker."
+          },
+          {
+            "name": "date",
+            "description": "UTC calendar date of the run (YYYY-MM-DD). Convenience column for daily grouping."
+          },
+          {
+            "name": "hour_utc",
+            "description": "UTC hour of the run, 0-23. Convenience column for time-of-day analysis."
+          },
+          {
+            "name": "ttft_tail_ratio",
+            "description": "ttft_p99 / ttft_p50. How much worse the tail is than the typical request. 1.0 means flat; higher means a heavy tail."
+          }
+        ]
+      }
+    }
+  ]
+}

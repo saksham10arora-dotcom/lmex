@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-07T23:01:52.800378+00:00",
+  "updated": "2026-10-08T02:40:27.879974+00:00",
   "report": "reports/2026-10-04.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-10-07T23:01:56.294279+00:00",
+        "ts": "2026-10-08T02:40:30.288641+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -19,7 +19,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-06T22:37:10.267366+00:00",
+        "ts": "2026-10-07T02:18:39.634463+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -37,7 +37,7 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-10-07T23:01:58.949836+00:00",
+        "ts": "2026-10-08T02:40:32.516523+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -52,7 +52,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-06T22:37:12.458732+00:00",
+        "ts": "2026-10-07T02:18:41.415109+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -70,40 +70,40 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-10-07T23:02:06.492946+00:00",
+        "ts": "2026-10-08T02:40:38.269762+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 439.0,
-        "ttft_p95": 1632.2,
-        "ttft_p99": 1632.2,
-        "total_p50": 516.4,
-        "total_p95": 1661.1,
-        "total_p99": 1661.1,
-        "tok_per_sec": 115.0
+        "ttft_p50": 331.1,
+        "ttft_p95": 448.1,
+        "ttft_p99": 448.1,
+        "total_p50": 396.6,
+        "total_p95": 514.6,
+        "total_p99": 514.6,
+        "tok_per_sec": 166.5
       },
       "prev": {
-        "ts": "2026-10-06T22:37:17.977678+00:00",
+        "ts": "2026-10-07T02:18:47.093841+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 351.6,
-        "ttft_p95": 389.4,
-        "ttft_p99": 389.4,
-        "total_p50": 419.5,
-        "total_p95": 470.1,
-        "total_p99": 470.1,
-        "tok_per_sec": 175.6
+        "ttft_p50": 366.1,
+        "ttft_p95": 752.7,
+        "ttft_p99": 752.7,
+        "total_p50": 440.9,
+        "total_p95": 820.1,
+        "total_p99": 820.1,
+        "tok_per_sec": 173.8
       },
       "status": "TRADING"
     },
     "QWEN": {
       "last": {
-        "ts": "2026-10-07T10:10:16.430906+00:00",
+        "ts": "2026-10-08T02:40:40.668507+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
@@ -118,7 +118,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-06T10:09:54.213682+00:00",
+        "ts": "2026-10-07T02:18:48.950703+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
@@ -150,53 +150,39 @@
         "total_p99": 3539.4,
         "tok_per_sec": 4.8
       },
-      "prev": {
-        "ts": "2026-10-04T00:33:50.999451+00:00",
-        "ticker": "GMNI",
-        "model": "gemini-2.5-flash",
-        "n": 6,
-        "errors": 0,
-        "error_rate": 0.0,
-        "ttft_p50": 1630.6,
-        "ttft_p95": 1802.4,
-        "ttft_p99": 1802.4,
-        "total_p50": 1630.6,
-        "total_p95": 1802.4,
-        "total_p99": 1802.4,
-        "tok_per_sec": 6.0
-      },
+      "prev": null,
       "status": "DELISTED"
     },
     "CBRS": {
       "last": {
-        "ts": "2026-10-07T23:03:11.362268+00:00",
+        "ts": "2026-10-08T02:41:44.841497+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
         "errors": 2,
         "error_rate": 0.25,
-        "ttft_p50": 211.5,
-        "ttft_p95": 534.0,
-        "ttft_p99": 534.0,
-        "total_p50": 227.3,
-        "total_p95": 583.8,
-        "total_p99": 583.8,
-        "tok_per_sec": 310.6
+        "ttft_p50": 162.2,
+        "ttft_p95": 789.8,
+        "ttft_p99": 789.8,
+        "total_p50": 190.9,
+        "total_p95": 812.7,
+        "total_p99": 812.7,
+        "tok_per_sec": 305.1
       },
       "prev": {
-        "ts": "2026-10-06T22:38:23.373661+00:00",
+        "ts": "2026-10-07T02:19:52.604672+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
         "errors": 2,
         "error_rate": 0.25,
-        "ttft_p50": 185.1,
-        "ttft_p95": 228.5,
-        "ttft_p99": 228.5,
-        "total_p50": 214.5,
-        "total_p95": 246.4,
-        "total_p99": 246.4,
-        "tok_per_sec": 448.2
+        "ttft_p50": 281.1,
+        "ttft_p95": 307.7,
+        "ttft_p99": 307.7,
+        "total_p50": 302.8,
+        "total_p95": 345.2,
+        "total_p99": 345.2,
+        "tok_per_sec": 357.2
       },
       "status": "TRADING"
     },
@@ -216,21 +202,7 @@
         "total_p99": 0.0,
         "tok_per_sec": 0.0
       },
-      "prev": {
-        "ts": "2026-10-04T00:35:08.079454+00:00",
-        "ticker": "OPRT",
-        "model": "google/gemma-4-31b-it:free",
-        "n": 6,
-        "errors": 6,
-        "error_rate": 1.0,
-        "ttft_p50": 0.0,
-        "ttft_p95": 0.0,
-        "ttft_p99": 0.0,
-        "total_p50": 0.0,
-        "total_p95": 0.0,
-        "total_p99": 0.0,
-        "tok_per_sec": 0.0
-      },
+      "prev": null,
       "status": "DELISTED"
     }
   }

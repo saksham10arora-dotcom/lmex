@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-08T17:51:00.303903+00:00",
+  "updated": "2026-10-08T23:17:15.904876+00:00",
   "report": "reports/2026-10-04.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-10-08T17:51:02.159431+00:00",
+        "ts": "2026-10-08T23:17:18.590288+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -19,7 +19,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-07T17:47:05.861736+00:00",
+        "ts": "2026-10-07T23:01:56.294279+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -37,7 +37,7 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-10-08T17:51:04.145802+00:00",
+        "ts": "2026-10-08T23:17:21.159743+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -52,7 +52,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-07T17:47:07.410779+00:00",
+        "ts": "2026-10-07T23:01:58.949836+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -70,34 +70,34 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-10-08T17:51:10.838962+00:00",
+        "ts": "2026-10-08T23:17:27.296261+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 460.7,
-        "ttft_p95": 816.1,
-        "ttft_p99": 816.1,
-        "total_p50": 584.9,
-        "total_p95": 888.4,
-        "total_p99": 888.4,
-        "tok_per_sec": 133.1
+        "ttft_p50": 395.1,
+        "ttft_p95": 523.8,
+        "ttft_p99": 523.8,
+        "total_p50": 468.8,
+        "total_p95": 627.4,
+        "total_p99": 627.4,
+        "tok_per_sec": 170.0
       },
       "prev": {
-        "ts": "2026-10-07T17:47:12.960462+00:00",
+        "ts": "2026-10-07T23:02:06.492946+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 433.9,
-        "ttft_p95": 1006.4,
-        "ttft_p99": 1006.4,
-        "total_p50": 479.7,
-        "total_p95": 1064.0,
-        "total_p99": 1064.0,
-        "tok_per_sec": 151.7
+        "ttft_p50": 439.0,
+        "ttft_p95": 1632.2,
+        "ttft_p99": 1632.2,
+        "total_p50": 516.4,
+        "total_p95": 1661.1,
+        "total_p99": 1661.1,
+        "tok_per_sec": 115.0
       },
       "status": "TRADING"
     },
@@ -155,36 +155,36 @@
     },
     "CBRS": {
       "last": {
-        "ts": "2026-10-08T17:51:56.582502+00:00",
+        "ts": "2026-10-08T23:18:31.123282+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
-        "errors": 6,
-        "error_rate": 0.75,
-        "ttft_p50": 339.0,
-        "ttft_p95": 783.7,
-        "ttft_p99": 783.7,
-        "total_p50": 347.0,
-        "total_p95": 809.3,
-        "total_p99": 809.3,
-        "tok_per_sec": 151.3
+        "errors": 2,
+        "error_rate": 0.25,
+        "ttft_p50": 225.0,
+        "ttft_p95": 279.6,
+        "ttft_p99": 279.6,
+        "total_p50": 243.8,
+        "total_p95": 296.2,
+        "total_p99": 296.2,
+        "tok_per_sec": 364.1
       },
       "prev": {
-        "ts": "2026-10-07T17:48:18.263059+00:00",
+        "ts": "2026-10-07T23:03:11.362268+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
-        "errors": 4,
-        "error_rate": 0.5,
-        "ttft_p50": 592.9,
-        "ttft_p95": 1696.1,
-        "ttft_p99": 1696.1,
-        "total_p50": 602.0,
-        "total_p95": 1721.9,
-        "total_p99": 1721.9,
-        "tok_per_sec": 89.0
+        "errors": 2,
+        "error_rate": 0.25,
+        "ttft_p50": 211.5,
+        "ttft_p95": 534.0,
+        "ttft_p99": 534.0,
+        "total_p50": 227.3,
+        "total_p95": 583.8,
+        "total_p99": 583.8,
+        "tok_per_sec": 310.6
       },
-      "status": "HALTED"
+      "status": "TRADING"
     },
     "OPRT": {
       "last": {

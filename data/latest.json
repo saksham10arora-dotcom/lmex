@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-08T10:27:10.268313+00:00",
+  "updated": "2026-10-08T17:51:00.303903+00:00",
   "report": "reports/2026-10-04.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-10-08T10:27:11.911089+00:00",
+        "ts": "2026-10-08T17:51:02.159431+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -19,7 +19,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-07T10:10:06.536927+00:00",
+        "ts": "2026-10-07T17:47:05.861736+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -37,7 +37,7 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-10-08T10:27:13.636830+00:00",
+        "ts": "2026-10-08T17:51:04.145802+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -52,7 +52,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-10-07T10:10:08.766203+00:00",
+        "ts": "2026-10-07T17:47:07.410779+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -70,34 +70,34 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-10-08T10:27:18.611087+00:00",
+        "ts": "2026-10-08T17:51:10.838962+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 304.7,
-        "ttft_p95": 375.7,
-        "ttft_p99": 375.7,
-        "total_p50": 400.3,
-        "total_p95": 457.7,
-        "total_p99": 457.7,
-        "tok_per_sec": 204.1
+        "ttft_p50": 460.7,
+        "ttft_p95": 816.1,
+        "ttft_p99": 816.1,
+        "total_p50": 584.9,
+        "total_p95": 888.4,
+        "total_p99": 888.4,
+        "tok_per_sec": 133.1
       },
       "prev": {
-        "ts": "2026-10-07T10:10:14.327337+00:00",
+        "ts": "2026-10-07T17:47:12.960462+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 268.6,
-        "ttft_p95": 529.0,
-        "ttft_p99": 529.0,
-        "total_p50": 367.4,
-        "total_p95": 604.8,
-        "total_p99": 604.8,
-        "tok_per_sec": 197.7
+        "ttft_p50": 433.9,
+        "ttft_p95": 1006.4,
+        "ttft_p99": 1006.4,
+        "total_p50": 479.7,
+        "total_p95": 1064.0,
+        "total_p99": 1064.0,
+        "tok_per_sec": 151.7
       },
       "status": "TRADING"
     },
@@ -155,36 +155,36 @@
     },
     "CBRS": {
       "last": {
-        "ts": "2026-10-08T10:28:23.559839+00:00",
+        "ts": "2026-10-08T17:51:56.582502+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
-        "errors": 2,
-        "error_rate": 0.25,
-        "ttft_p50": 224.4,
-        "ttft_p95": 363.7,
-        "ttft_p99": 363.7,
-        "total_p50": 236.5,
-        "total_p95": 398.8,
-        "total_p99": 398.8,
-        "tok_per_sec": 329.7
+        "errors": 6,
+        "error_rate": 0.75,
+        "ttft_p50": 339.0,
+        "ttft_p95": 783.7,
+        "ttft_p99": 783.7,
+        "total_p50": 347.0,
+        "total_p95": 809.3,
+        "total_p99": 809.3,
+        "tok_per_sec": 151.3
       },
       "prev": {
-        "ts": "2026-10-07T10:11:19.926769+00:00",
+        "ts": "2026-10-07T17:48:18.263059+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
-        "errors": 2,
-        "error_rate": 0.25,
-        "ttft_p50": 151.7,
-        "ttft_p95": 284.9,
-        "ttft_p99": 284.9,
-        "total_p50": 165.3,
-        "total_p95": 298.0,
-        "total_p99": 298.0,
-        "tok_per_sec": 422.5
+        "errors": 4,
+        "error_rate": 0.5,
+        "ttft_p50": 592.9,
+        "ttft_p95": 1696.1,
+        "ttft_p99": 1696.1,
+        "total_p50": 602.0,
+        "total_p95": 1721.9,
+        "total_p99": 1721.9,
+        "tok_per_sec": 89.0
       },
-      "status": "TRADING"
+      "status": "HALTED"
     },
     "OPRT": {
       "last": {

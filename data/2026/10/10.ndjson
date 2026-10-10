@@ -1,0 +1,1 @@
+{"ts": "2026-10-10T00:00:55.805138+00:00", "ticker": "CBRS", "model": "gpt-oss-120b", "n": 8, "errors": 2, "error_rate": 0.25, "ttft_p50": 197.4, "ttft_p95": 271.6, "ttft_p99": 271.6, "total_p50": 215.2, "total_p95": 290.1, "total_p99": 290.1, "tok_per_sec": 374.0}

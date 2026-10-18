@@ -30,9 +30,16 @@ jobs:
           mkdir -p release
           cp kaggle/llm_latency_benchmark.csv kaggle/llm_latency_benchmark.jsonl kaggle/dataset-metadata.json release/
           kaggle datasets version -p release -q -m "Weekly refresh through $(date -u +%F)"
-          # Card text, frequency and column docs go through the metadata endpoint.
+          # Card text and frequency go through the metadata endpoint. Kaggle rejects
+          # it while the new version is still processing, and "ready" from the
+          # status call can arrive before that finishes, so retry the update itself.
           for i in $(seq 1 30); do
-            kaggle datasets status nerfsaksham/llm-inference-latency-benchmark | grep -qi ready && break
+            kaggle datasets status nerfsaksham/llm-inference-latency-benchmark 2>/dev/null | grep -qi ready && break
             sleep 10
           done
-          kaggle datasets metadata nerfsaksham/llm-inference-latency-benchmark --update -p release
+          for attempt in 1 2 3 4 5 6; do
+            kaggle datasets metadata nerfsaksham/llm-inference-latency-benchmark --update -p release && exit 0
+            echo "metadata update attempt $attempt failed, retrying in 30s"
+            sleep 30
+          done
+          exit 1

@@ -8,7 +8,8 @@ carries the data card and per-column descriptions.
     python scripts/build_kaggle.py
 
 Outputs into kaggle/:
-    lmex_latency.csv       one row per benchmark run
+    llm_latency_benchmark.csv    one row per benchmark run, cleaned
+    llm_latency_benchmark.jsonl  the raw tape exactly as collected
     dataset-metadata.json  card + column descriptions, pushed by the Kaggle CLI
 """
 from __future__ import annotations
@@ -21,7 +22,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUT = ROOT / "kaggle"
-SLUG = "c0sbyy/llm-inference-latency-benchmark"
+SLUG = "nerfsaksham/llm-inference-latency-benchmark"
+# Filenames match the original upload. Most downloads arrive through the API,
+# so renaming a file would silently break whoever is already pulling it.
+CSV_NAME = "llm_latency_benchmark.csv"
+JSONL_NAME = "llm_latency_benchmark.jsonl"
 
 # Emitted in this order. Derived columns come last so the raw tape stays
 # recognisable to anyone who has read the NDJSON.
@@ -66,6 +71,11 @@ COLUMN_DOCS = {
     "ttft_tail_ratio": "ttft_p99 / ttft_p50. How much worse the tail is than the typical request. 1.0 means flat; higher means a heavy tail.",
 }
 
+COLUMN_TYPES = {
+    "ts": "datetime", "ticker": "string", "model": "string", "provider": "string",
+    "date": "string", "n": "integer", "errors": "integer", "hour_utc": "integer",
+}
+
 # tickers.json stores base_url, not a provider name. Map host -> provider so
 # consumers can group by provider without doing this join themselves.
 HOST_TO_PROVIDER = {
@@ -74,6 +84,11 @@ HOST_TO_PROVIDER = {
     "generativelanguage.googleapis.com": "google",
     "openrouter.ai": "openrouter",
 }
+
+
+# Kaggle enum: daily, weekly, monthly, quarterly, annually, never, not specified.
+# Must describe what actually happens; see .github/workflows for the refresh job.
+UPDATE_FREQUENCY = "not specified"  # flip to "weekly" once the refresh job exists
 
 
 def ticker_providers() -> dict[str, str]:
@@ -140,14 +155,15 @@ triples. This dataset reports percentiles so the tail is visible.
 
 ## Files
 
-- `lmex_latency.csv` -- one row per benchmark run, {len(RAW_FIELDS) + len(DERIVED_FIELDS)} columns, ready for `pd.read_csv`.
+- `llm_latency_benchmark.csv` -- one row per benchmark run, {len(RAW_FIELDS) + len(DERIVED_FIELDS)} columns, ready for `pd.read_csv`. Use this one.
+- `llm_latency_benchmark.jsonl` -- the raw collector tape, one JSON object per run, unmodified. Failed runs carry `0.0` here; the CSV nulls them (see below).
 
 ## Quickstart
 
 ```python
 import pandas as pd
 
-df = pd.read_csv("lmex_latency.csv", parse_dates=["ts"])
+df = pd.read_csv("llm_latency_benchmark.csv", parse_dates=["ts"])
 
 # Which endpoint has the worst tail relative to its typical request?
 print(df.groupby("ticker")["ttft_tail_ratio"].median().sort_values(ascending=False))
@@ -235,11 +251,12 @@ def main() -> None:
     enriched = [enrich(r, providers) for r in rows]
 
     OUT.mkdir(exist_ok=True)
-    csv_path = OUT / "lmex_latency.csv"
+    csv_path = OUT / CSV_NAME
     with csv_path.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=RAW_FIELDS + DERIVED_FIELDS)
         w.writeheader()
         w.writerows(enriched)
+    (OUT / JSONL_NAME).write_text("".join(json.dumps(r) + "\n" for r in rows))
 
     metadata = {
         "title": "Hourly LLM Inference Latency Benchmark",
@@ -251,27 +268,42 @@ def main() -> None:
         "description": build_description(enriched),
         "isPrivate": False,
         "licenses": [{"name": "MIT"}],
-        "keywords": [
-            "artificial-intelligence",
-            "nlp",
-            "computer-science",
-            "time series analysis",
-            "internet",
-        ],
+        "keywords": ["benchmark", "artificial intelligence", "time series analysis"],
+        "expectedUpdateFrequency": UPDATE_FREQUENCY,
+        "userSpecifiedSources": (
+            "Measured directly against the public API endpoints of each provider by an "
+            "hourly GitHub Actions cron running llm-latency-bench. Collection code: "
+            "https://github.com/saksham10arora-dotcom/lmex"
+        ),
         "resources": [
             {
-                "path": "lmex_latency.csv",
+                "path": CSV_NAME,
                 "description": (
-                    "One row per benchmark run. Latency columns are milliseconds; "
-                    "percentiles are nearest-rank over that run's requests."
+                    "Cleaned table, one row per benchmark run. Latency columns are "
+                    "milliseconds; percentiles are nearest-rank over that run's requests. "
+                    "Runs where every request failed have null latency columns."
                 ),
                 "schema": {
                     "fields": [
-                        {"name": name, "description": COLUMN_DOCS[name]}
+                        {"name": name, "description": COLUMN_DOCS[name], "type": COLUMN_TYPES.get(name, "numeric")}
                         for name in RAW_FIELDS + DERIVED_FIELDS
                     ]
                 },
-            }
+            },
+            {
+                "path": JSONL_NAME,
+                "description": (
+                    "Raw collector tape, one JSON object per run, exactly as recorded. "
+                    "Same 13 base fields as the CSV without the derived columns. Failed "
+                    "runs carry 0.0 latency here; prefer the CSV for analysis."
+                ),
+                "schema": {
+                    "fields": [
+                        {"name": name, "description": COLUMN_DOCS[name], "type": COLUMN_TYPES.get(name, "numeric")}
+                        for name in RAW_FIELDS
+                    ]
+                },
+            },
         ],
     }
     (OUT / "dataset-metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")

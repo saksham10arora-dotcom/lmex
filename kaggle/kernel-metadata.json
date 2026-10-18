@@ -1,0 +1,17 @@
+{
+  "id": "nerfsaksham/llm-inference-latency-starter",
+  "title": "LLM Inference Latency Starter",
+  "code_file": "llm-latency-starter.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "nerfsaksham/llm-inference-latency-benchmark"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

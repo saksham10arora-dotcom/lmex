@@ -80,12 +80,37 @@ Missing keys just delist the ticker. Edit `tickers.json` to list your own.
 
 ## Dataset
 
-The full benchmark history (743+ hourly records across 7 model endpoints, and
-growing) is published as a public dataset:
+The full benchmark history across 7 model endpoints is published as a public
+dataset:
 [LLM Inference Latency Benchmark on Kaggle](https://www.kaggle.com/datasets/c0sbyy/llm-inference-latency-benchmark).
 
 A live router that reads this feed to pick the fastest endpoint right now:
 [latency-router](https://github.com/saksham10arora-dotcom/latency-router).
+
+### Cutting a Kaggle release
+
+The repo tape is date-partitioned NDJSON, which is right for an append-only cron
+and wrong for a dataset consumer. `build_kaggle.py` flattens it into one CSV,
+joins the ticker to provider mapping from `tickers.json`, and regenerates the
+data card and per-column descriptions from the data itself so the card cannot
+drift out of sync with what shipped.
+
+This runs automatically every Monday via `.github/workflows/kaggle.yml`, which
+is what backs the "weekly" update frequency shown on Kaggle. To run it by hand:
+
+```bash
+gh workflow run kaggle.yml               # or locally:
+python scripts/build_kaggle.py           # -> kaggle/llm_latency_benchmark.csv/.jsonl + dataset-metadata.json
+```
+
+A starter notebook lives in `kaggle/starter.ipynb` and is published as a Kaggle
+kernel with `kaggle kernels push -p <dir with the notebook + kernel-metadata.json>`.
+
+One convention worth knowing before you analyse the CSV: runs where every
+request failed carry **null** latency columns, not zeros. Roughly a quarter of
+free-tier runs fail outright, and storing those as `0.0` would drag a naive
+`mean()` down by about 28 percent. `n`, `errors` and `error_rate` stay populated,
+so availability is still analysable on those rows.
 
 ## License
 

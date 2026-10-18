@@ -95,11 +95,16 @@ joins the ticker to provider mapping from `tickers.json`, and regenerates the
 data card and per-column descriptions from the data itself so the card cannot
 drift out of sync with what shipped.
 
+This runs automatically every Monday via `.github/workflows/kaggle.yml`, which
+is what backs the "weekly" update frequency shown on Kaggle. To run it by hand:
+
 ```bash
-python scripts/build_kaggle.py          # -> kaggle/lmex_latency.csv + dataset-metadata.json
-pip install kaggle                      # one time; needs ~/.kaggle/kaggle.json
-kaggle datasets version -p kaggle/ -m "refresh through $(date -u +%F)"
+gh workflow run kaggle.yml               # or locally:
+python scripts/build_kaggle.py           # -> kaggle/llm_latency_benchmark.csv/.jsonl + dataset-metadata.json
 ```
+
+A starter notebook lives in `kaggle/starter.ipynb` and is published as a Kaggle
+kernel with `kaggle kernels push -p <dir with the notebook + kernel-metadata.json>`.
 
 One convention worth knowing before you analyse the CSV: runs where every
 request failed carry **null** latency columns, not zeros. Roughly a quarter of

@@ -1,0 +1,38 @@
+name: kaggle
+# Weekly refresh of the public Kaggle dataset from the hourly tape.
+# The dataset card advertises a weekly cadence; this job is what makes that true.
+on:
+  schedule:
+    - cron: "30 3 * * 1"   # Mondays 03:30 UTC, clear of the :07 bench run
+  workflow_dispatch:
+concurrency:
+  group: kaggle
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install kaggle
+      - name: Build release
+        run: python scripts/build_kaggle.py
+      - name: Push new version and card
+        env:
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+        run: |
+          # Upload only the data files; the starter notebook is published separately.
+          mkdir -p release
+          cp kaggle/llm_latency_benchmark.csv kaggle/llm_latency_benchmark.jsonl kaggle/dataset-metadata.json release/
+          kaggle datasets version -p release -q -m "Weekly refresh through $(date -u +%F)"
+          # Card text, frequency and column docs go through the metadata endpoint.
+          for i in $(seq 1 30); do
+            kaggle datasets status nerfsaksham/llm-inference-latency-benchmark | grep -qi ready && break
+            sleep 10
+          done
+          kaggle datasets metadata nerfsaksham/llm-inference-latency-benchmark --update -p release

@@ -87,8 +87,8 @@ HOST_TO_PROVIDER = {
 
 
 # Kaggle enum: daily, weekly, monthly, quarterly, annually, never, not specified.
-# Must describe what actually happens; see .github/workflows for the refresh job.
-UPDATE_FREQUENCY = "not specified"  # flip to "weekly" once the refresh job exists
+# Must describe what actually happens: .github/workflows/kaggle.yml refreshes weekly.
+UPDATE_FREQUENCY = "weekly"
 
 
 def ticker_providers() -> dict[str, str]:

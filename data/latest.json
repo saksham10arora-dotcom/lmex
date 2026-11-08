@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-07T20:50:34.733433+00:00",
-  "report": "reports/2026-10-29.md",
+  "updated": "2026-11-08T00:30:11.217334+00:00",
+  "report": "reports/2026-11-07.md",
   "tickers": {
     "GROQ": {
       "last": {
-        "ts": "2026-11-07T20:50:37.075513+00:00",
+        "ts": "2026-11-08T00:30:12.811660+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -19,7 +19,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-11-06T17:55:06.353619+00:00",
+        "ts": "2026-11-06T23:03:00.480970+00:00",
         "ticker": "GROQ",
         "model": "llama-3.3-70b-versatile",
         "n": 8,
@@ -37,7 +37,7 @@
     },
     "L8B": {
       "last": {
-        "ts": "2026-11-07T20:50:39.458985+00:00",
+        "ts": "2026-11-08T00:30:14.533638+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -52,7 +52,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-11-06T17:55:08.748029+00:00",
+        "ts": "2026-11-06T23:03:02.668929+00:00",
         "ticker": "L8B",
         "model": "llama-3.1-8b-instant",
         "n": 8,
@@ -70,40 +70,40 @@
     },
     "OSS": {
       "last": {
-        "ts": "2026-11-07T20:50:44.770257+00:00",
+        "ts": "2026-11-08T00:30:19.636426+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 290.1,
-        "ttft_p95": 398.6,
-        "ttft_p99": 398.6,
-        "total_p50": 369.7,
-        "total_p95": 459.3,
-        "total_p99": 459.3,
-        "tok_per_sec": 193.9
+        "ttft_p50": 324.1,
+        "ttft_p95": 434.0,
+        "ttft_p99": 434.0,
+        "total_p50": 421.9,
+        "total_p95": 541.3,
+        "total_p99": 541.3,
+        "tok_per_sec": 190.7
       },
       "prev": {
-        "ts": "2026-11-06T17:55:14.700708+00:00",
+        "ts": "2026-11-06T23:03:08.292926+00:00",
         "ticker": "OSS",
         "model": "openai/gpt-oss-120b",
         "n": 8,
         "errors": 0,
         "error_rate": 0.0,
-        "ttft_p50": 370.2,
-        "ttft_p95": 528.5,
-        "ttft_p99": 528.5,
-        "total_p50": 439.3,
-        "total_p95": 546.8,
-        "total_p99": 546.8,
-        "tok_per_sec": 163.6
+        "ttft_p50": 326.2,
+        "ttft_p95": 352.0,
+        "ttft_p99": 352.0,
+        "total_p50": 405.3,
+        "total_p95": 423.2,
+        "total_p99": 423.2,
+        "tok_per_sec": 195.3
       },
       "status": "TRADING"
     },
     "QWEN": {
       "last": {
-        "ts": "2026-11-07T20:50:47.038841+00:00",
+        "ts": "2026-11-08T00:30:21.230346+00:00",
         "ticker": "QWEN",
         "model": "qwen/qwen3-32b",
         "n": 6,
@@ -135,13 +135,27 @@
       "status": "HALTED"
     },
     "GMNI": {
-      "last": null,
+      "last": {
+        "ts": "2026-11-08T00:30:34.006486+00:00",
+        "ticker": "GMNI",
+        "model": "gemini-2.5-flash",
+        "n": 6,
+        "errors": 0,
+        "error_rate": 0.0,
+        "ttft_p50": 1539.2,
+        "ttft_p95": 2150.0,
+        "ttft_p99": 2150.0,
+        "total_p50": 1539.2,
+        "total_p95": 2150.0,
+        "total_p99": 2150.0,
+        "tok_per_sec": 5.8
+      },
       "prev": null,
-      "status": "DELISTED"
+      "status": "TRADING"
     },
     "CBRS": {
       "last": {
-        "ts": "2026-11-07T20:50:49.864794+00:00",
+        "ts": "2026-11-08T00:30:36.150107+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
@@ -156,7 +170,7 @@
         "tok_per_sec": 0.0
       },
       "prev": {
-        "ts": "2026-11-06T17:55:17.233633+00:00",
+        "ts": "2026-11-06T23:03:11.173950+00:00",
         "ticker": "CBRS",
         "model": "gpt-oss-120b",
         "n": 8,
@@ -174,7 +188,7 @@
     },
     "OPRT": {
       "last": {
-        "ts": "2026-11-07T20:50:52.062998+00:00",
+        "ts": "2026-11-08T00:30:37.613624+00:00",
         "ticker": "OPRT",
         "model": "google/gemma-4-31b-it:free",
         "n": 6,
